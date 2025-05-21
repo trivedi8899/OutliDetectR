@@ -16,9 +16,10 @@ outlier_mahalanobis <- function(data) {
 }
 
 outlier_lof <- function(data, k = 5) {
-  require(DMwR)
-  return(DMwR::lofactor(data, k = k))
+  require(DMwR2)
+  return(DMwR2::lofactor(data, k = k))
 }
+
 
 outlier_iforest <- function(data) {
   require(isotree)
