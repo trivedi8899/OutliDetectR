@@ -1,22 +1,32 @@
 Package: OutliDetectR
-Title: A Hybrid R Package for Outlier and Missing Value Detection with OMV Score Methodology
+Title: Hybrid Outlier Detection and Missing Value Handling via OMV Score
 Version: 0.1.0
-Authors@R: person("Ruchi", "Trivedi", email = "ruchitrived881@gmail.com", role = c("aut", "cre"))
-Description: Provides novel methods for simultaneous outlier detection and missing value imputation using the OMV Score, integrating Mahalanobis Distance, Local Outlier Factor, Isolation Forest, and multiple imputation techniques. Suitable for high-dimensional and real-world datasets.
+Authors@R: 
+    person("Ruchi", "Trivedi", email = "ruchitrived881@gmail.com", role = c("aut", "cre"))
+Description: 
+    The OutliDetectR package implements a novel hybrid method for simultaneous 
+    outlier detection and missing value imputation based on the OMV (Outlier-Missing Value) score. 
+    This score combines Mahalanobis Distance, Local Outlier Factor (LOF), and Isolation Forest 
+    for robust outlier detection, while also accounting for missing data impact using 
+    techniques such as KNN imputation and missForest. The final OMV score is computed 
+    using a weighted combination of anomaly score and missingness severity. 
+    Designed for use with both low and high-dimensional data, it helps researchers 
+    detect, analyze, and correct anomalous records efficiently.
 License: MIT
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
-Imports:
+Imports: 
     dplyr,
     tidyr,
-    stats,
     missForest,
     DMwR,
     VIM,
     FNN,
     MASS,
-    RANN
+    RANN,
+    isotree,
+    stats
 Suggests:
     testthat,
     knitr,
